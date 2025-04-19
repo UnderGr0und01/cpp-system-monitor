@@ -198,8 +198,9 @@ CMakeFiles/monitor.dir/src/main.cpp.o: \
  /usr/include/c++/13/bits/stl_heap.h \
  /usr/include/c++/13/bits/uniform_int_dist.h \
  /home/andrey/Desktop/cpp-system-monitor/include/console_output.hpp \
- /usr/include/c++/13/iostream /usr/include/c++/13/csignal \
- /usr/include/signal.h \
+ /usr/include/c++/13/iostream \
+ /home/andrey/Desktop/cpp-system-monitor/include/memory_collector.hpp \
+ /usr/include/c++/13/csignal /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
  /usr/include/x86_64-linux-gnu/bits/signum-arch.h \
  /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h \

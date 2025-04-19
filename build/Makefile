@@ -225,6 +225,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/memory_collector.o: src/memory_collector.cpp.o
+.PHONY : src/memory_collector.o
+
+# target to build an object file
+src/memory_collector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/src/memory_collector.cpp.o
+.PHONY : src/memory_collector.cpp.o
+
+src/memory_collector.i: src/memory_collector.cpp.i
+.PHONY : src/memory_collector.i
+
+# target to preprocess a source file
+src/memory_collector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/src/memory_collector.cpp.i
+.PHONY : src/memory_collector.cpp.i
+
+src/memory_collector.s: src/memory_collector.cpp.s
+.PHONY : src/memory_collector.s
+
+# target to generate assembly for a file
+src/memory_collector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/src/memory_collector.cpp.s
+.PHONY : src/memory_collector.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -246,6 +270,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/memory_collector.o"
+	@echo "... src/memory_collector.i"
+	@echo "... src/memory_collector.s"
 .PHONY : help
 
 

@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/monitor.dir/src/data_aggregator.cpp.o.d"
   "CMakeFiles/monitor.dir/src/main.cpp.o"
   "CMakeFiles/monitor.dir/src/main.cpp.o.d"
+  "CMakeFiles/monitor.dir/src/memory_collector.cpp.o"
+  "CMakeFiles/monitor.dir/src/memory_collector.cpp.o.d"
   "monitor"
   "monitor.pdb"
 )
