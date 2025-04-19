@@ -13,26 +13,14 @@ project(SystemMonitor)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Указываем директорию с заголовочными файлами
-include_directories(${CMAKE_SOURCE_DIR}/include)
-
-# Список исходных файлов
+include_directories(include)
 set(SOURCES
     src/cpu_collector.cpp
     src/data_aggregator.cpp
     src/console_output.cpp
     src/main.cpp
+    src/memory_collector.cpp
+    src/network_collector.cpp
 )
-
-# Проверяем, что файлы существуют
-foreach(source ${SOURCES})
-    if(NOT EXISTS ${CMAKE_SOURCE_DIR}/${source})
-        message(FATAL_ERROR "Source file ${source} does not exist")
-    endif()
-endforeach()
-
-# Создаем исполняемый файл
 add_executable(monitor ${SOURCES})
-
-# Линкуем с pthread
 target_link_libraries(monitor PRIVATE pthread)

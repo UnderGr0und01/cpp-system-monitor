@@ -249,6 +249,30 @@ src/memory_collector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/src/memory_collector.cpp.s
 .PHONY : src/memory_collector.cpp.s
 
+src/network_collector.o: src/network_collector.cpp.o
+.PHONY : src/network_collector.o
+
+# target to build an object file
+src/network_collector.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/src/network_collector.cpp.o
+.PHONY : src/network_collector.cpp.o
+
+src/network_collector.i: src/network_collector.cpp.i
+.PHONY : src/network_collector.i
+
+# target to preprocess a source file
+src/network_collector.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/src/network_collector.cpp.i
+.PHONY : src/network_collector.cpp.i
+
+src/network_collector.s: src/network_collector.cpp.s
+.PHONY : src/network_collector.s
+
+# target to generate assembly for a file
+src/network_collector.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/monitor.dir/build.make CMakeFiles/monitor.dir/src/network_collector.cpp.s
+.PHONY : src/network_collector.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -273,6 +297,9 @@ help:
 	@echo "... src/memory_collector.o"
 	@echo "... src/memory_collector.i"
 	@echo "... src/memory_collector.s"
+	@echo "... src/network_collector.o"
+	@echo "... src/network_collector.i"
+	@echo "... src/network_collector.s"
 .PHONY : help
 
 

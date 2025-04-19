@@ -196,4 +196,5 @@ CMakeFiles/monitor.dir/src/data_aggregator.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h \
  /usr/include/c++/13/bits/fstream.tcc \
- /home/andrey/Desktop/cpp-system-monitor/include/memory_collector.hpp
+ /home/andrey/Desktop/cpp-system-monitor/include/memory_collector.hpp \
+ /home/andrey/Desktop/cpp-system-monitor/include/network_collector.hpp

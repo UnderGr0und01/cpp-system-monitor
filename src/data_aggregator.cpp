@@ -1,4 +1,7 @@
 #include "data_aggregator.hpp"
+#include "cpu_collector.hpp"
+#include "memory_collector.hpp"
+#include "network_collector.hpp"
 
 void DataAggregator::addCollector(std::unique_ptr<DataCollector> collector) {
     collectors_.push_back(std::move(collector));
@@ -12,12 +15,21 @@ void DataAggregator::start() {
                 collector->collect();
                 {
                     std::lock_guard<std::mutex> lock(mutex_);
-                    cached_data_ = collector->getData(); // Пока только CPU
+                    if (auto* cpu = dynamic_cast<CpuCollector*>(collector.get())) {
+                        cached_data_.cpu_usage = collector->getData().cpu_usage;
+                    } else if (auto* mem = dynamic_cast<MemoryCollector*>(collector.get())) {
+                        cached_data_.mem_usage = collector->getData().mem_usage;
+                    } else if (auto* net = dynamic_cast<NetworkCollector*>(collector.get())) {
+                        cached_data_.net_rx = collector->getData().net_rx;
+                        cached_data_.net_tx = collector->getData().net_tx;
+                        cached_data_.net_total_rx = collector->getData().net_total_rx;
+                        cached_data_.net_total_tx = collector->getData().net_total_tx;
+                    }
                     for (const auto& subscriber : subscribers_) {
                         subscriber(cached_data_);
                     }
                 }
-                std::this_thread::sleep_for(std::chrono::milliseconds(100));
+                std::this_thread::sleep_for(std::chrono::seconds(1));
             }
         });
     }
@@ -26,7 +38,9 @@ void DataAggregator::start() {
 void DataAggregator::stop() {
     running_ = false;
     for (auto& thread : threads_) {
-        if (thread.joinable()) thread.join();
+        if (thread.joinable()) {
+            thread.join();
+        }
     }
 }
 

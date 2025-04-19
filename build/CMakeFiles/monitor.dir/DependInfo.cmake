@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/andrey/Desktop/cpp-system-monitor/src/data_aggregator.cpp" "CMakeFiles/monitor.dir/src/data_aggregator.cpp.o" "gcc" "CMakeFiles/monitor.dir/src/data_aggregator.cpp.o.d"
   "/home/andrey/Desktop/cpp-system-monitor/src/main.cpp" "CMakeFiles/monitor.dir/src/main.cpp.o" "gcc" "CMakeFiles/monitor.dir/src/main.cpp.o.d"
   "/home/andrey/Desktop/cpp-system-monitor/src/memory_collector.cpp" "CMakeFiles/monitor.dir/src/memory_collector.cpp.o" "gcc" "CMakeFiles/monitor.dir/src/memory_collector.cpp.o.d"
+  "/home/andrey/Desktop/cpp-system-monitor/src/network_collector.cpp" "CMakeFiles/monitor.dir/src/network_collector.cpp.o" "gcc" "CMakeFiles/monitor.dir/src/network_collector.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.
