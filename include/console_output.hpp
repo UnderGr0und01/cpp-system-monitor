@@ -1,5 +1,5 @@
 #pragma once
-#include "data_collector.hpp"
+#include "collectors/data_collector.hpp"
 #include <iostream>
 
 class ConsoleOutput {

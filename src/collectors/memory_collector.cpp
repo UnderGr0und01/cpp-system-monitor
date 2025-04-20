@@ -1,4 +1,4 @@
-#include "memory_collector.hpp"
+#include "collectors/memory_collector.hpp"
 #include <stdexcept>
 #include <iostream>
 

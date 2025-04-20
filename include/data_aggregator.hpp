@@ -1,5 +1,6 @@
 #pragma once
-#include "data_collector.hpp"
+#include "collectors/data_collector.hpp"
+#include "config.hpp"
 #include <memory>
 #include <vector>
 #include <thread>

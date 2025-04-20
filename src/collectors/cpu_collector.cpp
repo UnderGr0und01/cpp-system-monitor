@@ -1,4 +1,4 @@
-#include "cpu_collector.hpp"
+#include "collectors/cpu_collector.hpp"
 #include <thread>
 #include <stdexcept>
 #include <iostream>

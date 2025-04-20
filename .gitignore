@@ -1,0 +1,15 @@
+build/
+*.o
+*.a
+*.so
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+monitor
+*.log
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

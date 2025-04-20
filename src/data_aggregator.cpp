@@ -1,13 +1,14 @@
 #include "data_aggregator.hpp"
-#include "cpu_collector.hpp"
-#include "memory_collector.hpp"
-#include "network_collector.hpp"
+#include "collectors/cpu_collector.hpp"
+#include "collectors/memory_collector.hpp"
+#include "collectors/network_collector.hpp"
 
 void DataAggregator::addCollector(std::unique_ptr<DataCollector> collector) {
     collectors_.push_back(std::move(collector));
 }
 
 void DataAggregator::start() {
+    Config config = load_config("../config.ini");
     running_ = true;
     for (auto& collector : collectors_) {
         threads_.emplace_back([&] {
@@ -29,7 +30,7 @@ void DataAggregator::start() {
                         subscriber(cached_data_);
                     }
                 }
-                std::this_thread::sleep_for(std::chrono::seconds(1));
+                std::this_thread::sleep_for(std::chrono::milliseconds(config.update_interval_ms));
             }
         });
     }

@@ -1,4 +1,4 @@
-#include "network_collector.hpp"
+#include "collectors/network_collector.hpp"
 #include <stdexcept>
 #include <thread>
 #include <iostream>
