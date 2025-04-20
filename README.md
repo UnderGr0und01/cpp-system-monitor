@@ -17,7 +17,7 @@ A lightweight, terminal-based system monitoring tool written in C++ using `ncurs
 ## Installation 
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/yourusername/cpp-system-monitor.git
+   git clone https://github.com/UnderGr0und01/cpp-system-monitor.git
    cd cpp-system-monitor
    ```
 
